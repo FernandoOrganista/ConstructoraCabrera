@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Proyectos";
+    ViewData["ActivePage"] = "Projects";
+    ViewData["PageHeader"] = "Proyectos";
+}
+
+<partial name="_PageHeader" />
+
+<div class="container-fluid py-5 my-5 px-0">
+    <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+        <p class="fw-medium text-uppercase text-primary mb-2">Portafolio</p>
+        <h1 class="display-5 mb-5">Obras que hemos entregado</h1>
+    </div>
+    <div class="owl-carousel project-carousel bg-dark wow fadeIn" data-wow-delay="0.1s">
+        <a class="project-item" asp-controller="Home" asp-action="Contact">
+            <img class="img-fluid" src="~/img/project-1.jpg" alt="Ingeniería automotriz">
+            <div class="project-title"><h5 class="text-primary mb-0">Ingeniería automotriz</h5></div>
+        </a>
+        <a class="project-item" asp-controller="Home" asp-action="Contact">
+            <img class="img-fluid" src="~/img/project-2.jpg" alt="Obra civil">
+            <div class="project-title"><h5 class="text-primary mb-0">Obra civil</h5></div>
+        </a>
+        <a class="project-item" asp-controller="Home" asp-action="Contact">
+            <img class="img-fluid" src="~/img/project-3.jpg" alt="Instalaciones de proceso">
+            <div class="project-title"><h5 class="text-primary mb-0">Instalaciones de proceso</h5></div>
+        </a>
+        <a class="project-item" asp-controller="Home" asp-action="Contact">
+            <img class="img-fluid" src="~/img/project-4.jpg" alt="Energía">
+            <div class="project-title"><h5 class="text-primary mb-0">Energía</h5></div>
+        </a>
+        <a class="project-item" asp-controller="Home" asp-action="Contact">
+            <img class="img-fluid" src="~/img/project-5.jpg" alt="Infraestructura">
+            <div class="project-title"><h5 class="text-primary mb-0">Infraestructura</h5></div>
+        </a>
+        <a class="project-item" asp-controller="Home" asp-action="Contact">
+            <img class="img-fluid" src="~/img/project-6.jpg" alt="Agua">
+            <div class="project-title"><h5 class="text-primary mb-0">Agua</h5></div>
+        </a>
+    </div>
+</div>

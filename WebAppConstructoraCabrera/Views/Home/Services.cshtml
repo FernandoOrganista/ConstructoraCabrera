@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Servicios";
+    ViewData["ActivePage"] = "Services";
+    ViewData["PageHeader"] = "Servicios";
+}
+
+<partial name="_PageHeader" />
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="fw-medium text-uppercase text-primary mb-2">Servicios</p>
+            <h1 class="display-5 mb-4">Soluciones de ingeniería y construcción</h1>
+        </div>
+        <div class="row gy-5 gx-4">
+            @{
+                var services = new[]
+                {
+                    new { Img = "service-1.jpg", Title = "Obra civil e industrial", Text = "Cimentaciones, estructuras de concreto y acero, naves y urbanización interior." },
+                    new { Img = "service-2.jpg", Title = "Energía e instalaciones", Text = "Eléctrico, mecánico, HVAC y sistemas auxiliares para operación continua." },
+                    new { Img = "service-3.jpg", Title = "Hidráulica y tratamiento", Text = "Redes de agua, drenaje, plantas de tratamiento y sistemas de bombeo." },
+                    new { Img = "service-1.jpg", Title = "Supervisión y control de obra", Text = "Programas, bitácoras, estimación y seguimiento de calidad y seguridad." },
+                    new { Img = "service-2.jpg", Title = "Mantenimiento industrial", Text = "Paros programados, adecuaciones de planta y refuerzo de instalaciones." },
+                    new { Img = "service-3.jpg", Title = "Preconstrucción", Text = "Presupuesto, constructabilidad y planeación de suministros y frentes." }
+                };
+                var delay = new[] { "0.1s", "0.3s", "0.5s", "0.1s", "0.3s", "0.5s" };
+            }
+            @for (var i = 0; i < services.Length; i++)
+            {
+                var item = services[i];
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="@delay[i]">
+                    <div class="service-item">
+                        <img class="img-fluid" src="~/img/@item.Img" alt="@item.Title">
+                        <div class="service-img">
+                            <img class="img-fluid" src="~/img/@item.Img" alt="@item.Title">
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-25">
+                                <h3 class="mb-0">@item.Title</h3>
+                                <hr class="w-25">
+                            </div>
+                            <div class="service-text">
+                                <p class="text-white mb-0">@item.Text</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light" asp-controller="Home" asp-action="Contact">Cotizar</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<partial name="_Testimonials" />

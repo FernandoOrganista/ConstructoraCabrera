@@ -1,0 +1,65 @@
+@{
+    ViewData["Title"] = "Por qué elegirnos";
+    ViewData["ActivePage"] = "Features";
+    ViewData["PageHeader"] = "Por qué elegirnos";
+}
+
+<partial name="_PageHeader" />
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="position-relative me-lg-4">
+                    <img class="img-fluid w-100" src="~/img/feature.jpg" alt="Ventajas Constructora Cabrera">
+                    <span class="position-absolute top-50 start-100 translate-middle bg-white rounded-circle d-none d-lg-block" style="width: 120px; height: 120px;"></span>
+                    <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <p class="fw-medium text-uppercase text-primary mb-2">Diferenciadores</p>
+                <h1 class="display-5 mb-4">Cómo protegemos tu inversión en obra</h1>
+                <p class="mb-4">Trabajamos con un frente de ingeniería, otro de campo y un control de costos que se reporta de forma periódica. El objetivo es reducir desviaciones y mantener la obra predecible.</p>
+                <div class="row gy-4">
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h4>Personal experimentado</h4>
+                                <span>Cuadros de mando con experiencia en naves, infraestructura y plantas de proceso.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h4>Ejecución industrial confiable</h4>
+                                <span>Procedimientos de soldadura, concreto, izajes y seguridad alineados a la operación.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h4>Comunicación continua</h4>
+                                <span>Un interlocutor de proyecto y reportes claros de avance, riesgos y siguientes pasos.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<partial name="_VideoModal" />
